@@ -1,6 +1,4 @@
 import java.util.Scanner;
-import weka.core.Instances; // Importación de Weka solicitada
-
 class Nodo {
     int valor;
     Nodo izquierdo;
