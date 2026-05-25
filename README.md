@@ -1,5 +1,5 @@
 # Árbol Binario de Búsqueda
-**Aprendizaje Automático — Implementación con WEKA**
+
 
 Visualización interactiva de un Árbol Binario de Búsqueda (BST) con reporte de ordenamientos y búsqueda.
 
