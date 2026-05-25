@@ -4,7 +4,7 @@
 Visualización interactiva de un Árbol Binario de Búsqueda (BST) con reporte de ordenamientos y búsqueda.
 
 ## 🌐 Ver en línea
-[GitHub Pages — Árbol Binario](https://TU-USUARIO.github.io/TU-REPOSITORIO)
+[GitHub Pages — Árbol Binario](https://alexhssd-max.github.io/tradicional/)
 
 ## 📋 Funcionalidades
 - Inserción de nodos con clasificación izquierda/derecha automática
