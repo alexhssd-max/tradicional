@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árbol Binario de Búsqueda</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- MODAL: Código Java -->
+    <div class="modal-overlay" id="javaModal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <div>
+                    <span class="modal-badge">☕ Java + WEKA</span>
+                    <h2 class="modal-title">Código Java — Árbol Binario</h2>
+                </div>
+                <button class="modal-close" id="closeModal">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="code-toolbar">
+                    <span class="code-filename">📄 Main.java</span>
+                    <button class="btn-copy" id="copyBtn">📋 Copiar código</button>
+                </div>
+                <pre class="code-block"><code id="javaCode"></code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <header>
+            <div class="header-badge">Aprendizaje Automático</div>
+            <h1>Árbol Binario de Búsqueda</h1>
+            <p>Visualización interactiva de inserción, búsqueda y recorridos</p>
+        </header>
+
+        <!-- CONTROLES -->
+        <div class="glass-card controls-card">
+
+            <!-- BLOQUE RAÍZ -->
+            <div class="control-block">
+                <span class="input-label">🌱 Nodo Raíz <span id="rootStatus" class="status-tag pending">Sin raíz</span></span>
+                <div class="input-group">
+                    <input type="number" id="rootValue" placeholder="Valor raíz">
+                    <button id="rootBtn" class="btn root">🌱 Establecer Raíz</button>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- BLOQUE NODO -->
+            <div class="control-block">
+                <span class="input-label">🔵 Insertar Nodo</span>
+                <div class="input-group">
+                    <input type="number" id="nodeValue" placeholder="Valor nodo" disabled>
+                    <button id="insertBtn" class="btn primary" disabled>➕ Agregar Nodo</button>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- BLOQUE BÚSQUEDA -->
+            <div class="control-block">
+                <span class="input-label">🔍 Buscar</span>
+                <div class="input-group">
+                    <input type="number" id="searchValue" placeholder="Valor a buscar">
+                    <button id="searchBtn" class="btn secondary">🔍 Buscar</button>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- ACCIONES -->
+            <div class="control-block actions-block">
+                <button id="clearBtn" class="btn danger">🗑️ Eliminar Todo</button>
+                <button id="showJavaBtn" class="btn java">☕ Ver Código Java</button>
+            </div>
+
+        </div>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="main-content">
+
+            <!-- VISUALIZACIÓN -->
+            <div class="glass-card tree-container">
+                <div id="treeVisualization" class="tree-canvas">
+                    <div class="tree-empty-msg" id="emptyMsg">
+                        <span class="icon">🌳</span>
+                        <p>Establece la <strong>Raíz</strong> para comenzar</p>
+                    </div>
+                </div>
+                <div class="legend">
+                    <div class="legend-item"><div class="legend-dot root-dot"></div> Raíz</div>
+                    <div class="legend-item"><div class="legend-dot left"></div> Izquierda (menor)</div>
+                    <div class="legend-item"><div class="legend-dot right"></div> Derecha (mayor)</div>
+                    <div class="legend-item"><div class="legend-dot found"></div> Encontrado</div>
+                </div>
+            </div>
+
+            <!-- REPORTE FINAL -->
+            <div class="report-container">
+                <div class="glass-card">
+                    <h2>📊 Reporte Final</h2>
+
+                    <div class="report-section">
+                        <h3>a. Ordenamientos</h3>
+                        <div class="traversal-group">
+                            <span class="label">Preorden:</span>
+                            <span id="preorderResult" class="result">—</span>
+                        </div>
+                        <div class="traversal-group">
+                            <span class="label">Postorden:</span>
+                            <span id="postorderResult" class="result">—</span>
+                        </div>
+                        <div class="traversal-group">
+                            <span class="label">Inorden ↑:</span>
+                            <span id="inorderResult" class="result">—</span>
+                        </div>
+                        <div class="traversal-group">
+                            <span class="label">Inorden ↓:</span>
+                            <span id="inorderDescResult" class="result">—</span>
+                        </div>
+                    </div>
+
+                    <div class="report-section">
+                        <h3>b. Pasos de Ordenamiento</h3>
+                        <div class="stat-group">
+                            <span class="label">Inorden Ascendente</span>
+                            <span id="inorderSteps" class="result-badge">0</span>
+                        </div>
+                        <div class="stat-group">
+                            <span class="label">Inorden Descendente</span>
+                            <span id="inorderDescSteps" class="result-badge">0</span>
+                        </div>
+                    </div>
+
+                    <div class="report-section">
+                        <h3>c. Resultado de Búsqueda</h3>
+                        <div class="search-result-box" id="searchResultBox">
+                            Realiza una búsqueda para ver el resultado.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
